@@ -236,7 +236,33 @@ class Rout:
 
         return string
 
+    def to_bpp_code150(self):
+        return '@ ROUT, "", "", {114}, "", 0 : {0},{1},"{2}",{3},{4},{5},{6},{7},{8},{9},\
+{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},\
+{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},\
+{30},{31},{32},{33},{34},{35},{36},{37},{38},{39},\
+{40},{41},{42},{43},{44},{45},"{46}",{47},{48},{49},\
+{50},{51},{52},{53},{54},{55},{56},{57},{58},{59},\
+{60},{61},{62},{63},{64},{65},{66},{67},{68},"{69}",\
+{70},{71},{72},{73},{74},{75},{76},{77},{78},"{79}",\
+{80},{81},{82},{83},{84},{85},"{86}","{87}","{88}",{89},\
+{90},{91},{92},{93},{94},{95},{96},{97},{98},{99},\
+{100},{101},{102},{103},{104},{105},{106},{107},{108},{109},\
+{110},{111},{112},{113}'.format(self.rout_id,self.side,self.crn,self.z,self.dp,self.opt,self.dia,self.rty,self.xrc,self.yrc,\
+                                               self.dx,self.dy,self.r,self.a,self.da,self.rdl,self.nrp,self.az,self.ar,self.zs,\
+                                               self.ze,self.cka,self.thr,self.rv,self.ckt,self.arp,self.lrp,self.er,self.cow,self.ovm,\
+                                               self.a21,self.tos,self.vtr,self.dvr,self.otr,self.svr,self.cof,self.dof,self.gip,self.lsv,\
+                                               self.s21,self.azs,self.dsp,self.rsp,self.ios,self.wsp,self.tnm,self.ttp,self.tcl,self.crc,\
+                                               self.tin,self.ain,self.cin,self.gin,self.tbi,self.tli,self.tqi,self.tou,self.aou,self.cou,\
+                                               self.gou,self.tbo,self.tlo,self.tqo,self.din,self.dou,self.sds,self.prp,self.bdr,self.spi,\
+                                               self.sc,self.swi,self.blw,self.prs,self.bfc,self.shp,self.swp,self.csp,self.udt,self.tdt,\
+                                               self.ddt,self.sdt,self.idt,self.fdt,self.rdt,self.ea21,self.cen,self.agg,self.lay,self.eecs,\
+                                               self.pdin,self.pdu,self.pcin,self.pcu,self.pmol,self.aux,self.crr,self.nebs,self.etb,self.fxd,\
+                                               self.fxda,self.kdt,self.eml,self.etg,self.rtas,self.rdin,self.sdsf,self.incstp,self.etgt,self.ajt,\
+                                               self.ion,self.lubmnz,self.sht,self.shd,str(id(self)))
+    
 
 if __name__=='__main__':
     r =Rout()
-    print(r.to_cix())
+    print(r.to_bpp_code150())
+    
