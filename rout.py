@@ -261,8 +261,21 @@ class Rout:
                                                self.fxda,self.kdt,self.eml,self.etg,self.rtas,self.rdin,self.sdsf,self.incstp,self.etgt,self.ajt,\
                                                self.ion,self.lubmnz,self.sht,self.shd,str(id(self)))
     
+    def to_bpp_code130(self):
+        return '@ ROUT, "TDCODE1", "", {42}, "" : "P{42}",\
+{0},{1},{2},{3},"{4}",{5},{6},{7},{8},{9},\
+{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},\
+{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},\
+{30},{31},{32},{33},{34},{35},{36},{37},{38},{39},\
+{40},{41}'.format(self.side,self.crn,self.z,self.dp,self.iso,self.opt,self.dia,self.rty,self.xrc,self.yrc,\
+                  self.dx,self.dy,self.r,self.a,self.da,self.rdl,self.nrp,self.az,self.ar,self.zs,\
+                  self.ze,self.cka,self.thr,self.rv,self.ckt,self.arp,self.lrp,self.er,self.cow,self.ovm,\
+                  self.a21,self.tos,self.vtr,self.dvr,self.otr,self.svr,self.cof,self.dof,self.gip,self.lsv,self.s21,self.azs,str(id(self)))
+
+
+
 
 if __name__=='__main__':
     r =Rout()
-    print(r.to_bpp_code150())
+    print(r.to_bpp_code130())
     
